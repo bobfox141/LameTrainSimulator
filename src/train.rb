@@ -1,49 +1,45 @@
 #!/usr/bin/env ruby
 #
 
+require 'loop.rb'
+require 'station.rb'
 
+class Train
+  def stopAtStation; end
 
+  def parked; end
 
-def stopAtStation; end
+  def transit; end
 
-def parked; end
+  def stopping; end
 
-def transit; end
+  def doorsOpening; end
 
-def stopping; end
+  def doorsClosing; end
 
-def doorsOpening; end
+  def parked; end
 
-def doorsClosing; end
+  # states
+  PARKED = 0
+  STARTINGFROMPARK = 1
+  TRANSIT = 2
+  STOPPING = 3
+  STOPATSTATION = 4
+  DOORSOPENING = 5
+  DOORSCLOSING = 6
+  STARTINGFROMSTATION = 7
 
-def parked; end
+  trainStateList = [PARKED, STARTINGFROMPARK, TRANSIT, STOPPING, STOPATSTATION, DOORSOPENING, DOORSCLOSING,
+                    STARTINGFROMSTATION]
 
-# states
-PARKED = 0
-STARTINGFROMPARK = 1
-TRANSIT = 2
-STOPPING = 3
-STOPATSTATION = 4
-DOORSOPENING = 5
-DOORSCLOSING = 6
-STARTINGFROMSTATION = 7
+  train = PARKED
+  loop =
+    # we are going to use this function to get going and add the other parts incrementally.
+    # the train leaves the yard in the AM in a basic simulation and does a number of loops until
+    # the end of the day, when they put the train in for maintainence and change the crew.
+    # Let's get started.
 
-trainStateList = [PARKED, STARTINGFROMPARK, TRANSIT, STOPPING, STOPATSTATION, DOORSOPENING, DOORSCLOSING,
-                  STARTINGFROMSTATION]
-
-train = PARKED
-
-stationList = ['Hampton Cove', 'East BumFark', 'Downtown Huntington', 'Redstone Clayface', 'Bothan Death Star',
-               'Mousekatters', 'Bailey Cove']
-
-
-def driveTheTrain
-  puts('This is a train simulation. It starts the day parked in the yard being maintained.')
-
-
-  until train == PARKED
-
-  end
-  
-end
-
+    def driveTheTrain
+      puts('This is a train simulation. It starts the day parked in the yard being maintained.')
+    end
+end # end class Train
