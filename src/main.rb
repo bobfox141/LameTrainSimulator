@@ -4,5 +4,8 @@
 
 require_relative 'train.rb'
 
-t = Train.new
-t.driveTheTrain
+# create a new train object
+t = Train.new 
+
+# kick of a day of simulation
+t.go 

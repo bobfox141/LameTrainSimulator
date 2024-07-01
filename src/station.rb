@@ -17,7 +17,8 @@ class Station
   # ttl passengers, per passenger, so more passengers, longer stop
   # station class, i.e. how nice it is. 
   # there will be a commuter feature later on.
-  # so the station determins how long the wait is before the train gets moving again. The higher the class of the longer the wait, and the larger the number of passengers the longer the wait. 
+  # so the station determins how long the wait is before the train gets moving again. The higher the class of the longer the wait, and the larger the number of passengers the longer the wait. and this is WAY overcomplicated for what it is right now.
+  
   
   attr_accessor :name, :loopkm, :avgpasscnt, :timetoload, :stclass
 
